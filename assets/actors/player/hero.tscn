@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bodc0f0gvba3w"]
+
+[ext_resource type="PackedScene" uid="uid://e21ldoi0gte7" path="res://assets/actors/player/hero/camera.tscn" id="1_1uhg0"]
+[ext_resource type="Script" path="res://assets/actors/player/hero.gd" id="1_7tji2"]
+
+[sub_resource type="Gradient" id="Gradient_1aka0"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o1q02"]
+gradient = SubResource("Gradient_1aka0")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nyyln"]
+
+[node name="hero" type="CharacterBody2D"]
+position = Vector2(100, 0)
+collision_layer = 2
+script = ExtResource("1_7tji2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.078125, 30)
+texture = SubResource("GradientTexture1D_o1q02")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nyyln")
+
+[node name="camera" parent="." instance=ExtResource("1_1uhg0")]
+anchor_mode = 1

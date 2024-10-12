@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://e21ldoi0gte7"]
+
+[node name="camera" type="Camera2D"]
+anchor_mode = 0
+limit_left = 0
+limit_top = -5000
+limit_right = 20000
+limit_bottom = 128
+
+[node name="walls" type="StaticBody2D" parent="."]
+process_mode = 4
+collision_layer = 0
+collision_mask = 0
+
+[node name="shape" type="CollisionPolygon2D" parent="walls"]
+build_mode = 1
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, -900, 0, -900)
