@@ -23,4 +23,3 @@ texture = SubResource("GradientTexture1D_o1q02")
 shape = SubResource("CapsuleShape2D_nyyln")
 
 [node name="camera" parent="." instance=ExtResource("1_1uhg0")]
-anchor_mode = 1
