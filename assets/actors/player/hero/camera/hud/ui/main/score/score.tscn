@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://byb0p7bguir7w"]
+
+[ext_resource type="Theme" uid="uid://8qi8epbqsx4l" path="res://resources/ui/styles/ui.tres" id="1_f16yv"]
+[ext_resource type="Script" path="res://assets/actors/player/hero/camera/hud/ui/main/score/value.gd" id="2_6afyl"]
+[ext_resource type="Theme" uid="uid://bw85to7l05fr0" path="res://resources/ui/styles/label/sub_caption.tres" id="2_a64hx"]
+
+[node name="score" type="VBoxContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_f16yv")
+
+[node name="center" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="value" type="Label" parent="center"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "000000"
+script = ExtResource("2_6afyl")
+
+[node name="caption" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("2_a64hx")
+text = "Score"

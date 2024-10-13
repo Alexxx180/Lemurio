@@ -2,5 +2,5 @@ extends Node
 
 signal feedback()
 
-func action() -> void:
-	feedback.emit()
+func action(hero: CharacterBody2D) -> void:
+	feedback.emit(hero)

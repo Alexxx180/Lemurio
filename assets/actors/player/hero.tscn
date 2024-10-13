@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bodc0f0gvba3w"]
+[gd_scene load_steps=7 format=3 uid="uid://bodc0f0gvba3w"]
 
-[ext_resource type="PackedScene" uid="uid://e21ldoi0gte7" path="res://assets/actors/player/hero/camera.tscn" id="1_1uhg0"]
+[ext_resource type="PackedScene" uid="uid://e21ldoi0gte7" path="res://assets/actors/player/hero/camera/camera.tscn" id="1_1uhg0"]
 [ext_resource type="Script" path="res://assets/actors/player/hero.gd" id="1_7tji2"]
 [ext_resource type="PackedScene" uid="uid://br3toant515et" path="res://assets/actors/player/hero/view.tscn" id="2_g2lyv"]
 [ext_resource type="Shape2D" uid="uid://clrc87yp1rxw6" path="res://assets/actors/player/hero/hero.tres" id="3_ryx63"]
+[ext_resource type="PackedScene" uid="uid://bbe1bbpojklqd" path="res://assets/actors/player/hero/stats/stats.tscn" id="5_8xd0n"]
 [ext_resource type="PackedScene" uid="uid://dqxh63u61e74a" path="res://assets/actors/player/hero/detectors/detectors.tscn" id="5_fuybm"]
 
 [node name="hero" type="CharacterBody2D"]
@@ -15,12 +16,14 @@ script = ExtResource("1_7tji2")
 [node name="shape" type="CollisionShape2D" parent="."]
 shape = ExtResource("3_ryx63")
 
+[node name="doll" type="Node2D" parent="."]
+
 [node name="view" parent="." instance=ExtResource("2_g2lyv")]
 
 [node name="camera" parent="." instance=ExtResource("1_1uhg0")]
 limit_top = -5056
 limit_right = 20031
 
-[node name="stats" type="Node" parent="."]
+[node name="stats" parent="." instance=ExtResource("5_8xd0n")]
 
 [node name="detectors" parent="." instance=ExtResource("5_fuybm")]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqxh63u61e74a"]
+[gd_scene load_steps=3 format=3 uid="uid://dqxh63u61e74a"]
 
+[ext_resource type="Script" path="res://assets/actors/player/hero/detectors/detectors.gd" id="1_7p3dt"]
 [ext_resource type="PackedScene" uid="uid://dxs7cs4jjiqxy" path="res://assets/actors/player/hero/detectors/head/head.tscn" id="1_yakt3"]
 
 [node name="detectors" type="Node2D"]
+script = ExtResource("1_7p3dt")
 
 [node name="head" parent="." instance=ExtResource("1_yakt3")]
 position = Vector2(0, -13)

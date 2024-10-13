@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://e21ldoi0gte7"]
+
+[ext_resource type="PackedScene" uid="uid://bxhslblvbatmk" path="res://assets/actors/player/hero/camera/hud/hud.tscn" id="1_r3sur"]
+[ext_resource type="Script" path="res://assets/actors/player/hero/camera/camera.gd" id="1_u3dt8"]
+
+[node name="camera" type="Camera2D"]
+limit_left = 0
+limit_top = -5000
+limit_right = 20000
+limit_bottom = 128
+script = ExtResource("1_u3dt8")
+
+[node name="hud" parent="." instance=ExtResource("1_r3sur")]

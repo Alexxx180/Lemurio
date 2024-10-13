@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://prkw3iila1x1"]
+
+[ext_resource type="Theme" uid="uid://8qi8epbqsx4l" path="res://resources/ui/styles/ui.tres" id="1_2gqch"]
+[ext_resource type="PackedScene" uid="uid://bhl2ppasg1jud" path="res://assets/actors/player/hero/camera/hud/ui/main/main.tscn" id="2_b12ot"]
+
+[node name="ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2gqch")
+
+[node name="main" parent="." instance=ExtResource("2_b12ot")]
+layout_mode = 1

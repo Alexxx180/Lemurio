@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbe1bbpojklqd"]
+
+[ext_resource type="PackedScene" uid="uid://bciqpsnsbm4um" path="res://assets/actors/player/hero/stats/stat/stat.tscn" id="1_drh21"]
+[ext_resource type="Script" path="res://assets/actors/player/hero/stats/stats.gd" id="1_fkunr"]
+
+[node name="stats" type="Node"]
+script = ExtResource("1_fkunr")
+
+[node name="lives" parent="." instance=ExtResource("1_drh21")]
+_value = 3
+
+[node name="score" parent="." instance=ExtResource("1_drh21")]

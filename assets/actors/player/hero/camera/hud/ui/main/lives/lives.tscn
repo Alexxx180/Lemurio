@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b82e1gt3s8fnd"]
+
+[ext_resource type="Theme" uid="uid://bw85to7l05fr0" path="res://resources/ui/styles/label/sub_caption.tres" id="1_2ysoo"]
+[ext_resource type="Theme" uid="uid://8qi8epbqsx4l" path="res://resources/ui/styles/ui.tres" id="1_ynqpk"]
+[ext_resource type="Script" path="res://assets/actors/player/hero/camera/hud/ui/main/lives/value.gd" id="2_3gblb"]
+
+[node name="lives" type="VBoxContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_ynqpk")
+
+[node name="center" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="value" type="Label" parent="center"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "3"
+horizontal_alignment = 1
+script = ExtResource("2_3gblb")
+
+[node name="caption" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("1_2ysoo")
+text = "Lives"

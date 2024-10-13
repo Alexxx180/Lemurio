@@ -2,12 +2,16 @@ extends CharacterBody2D
 
 enum { SPEED = 1000, JUMP = 2600, GRAVITY = 7750 } # JUMP = 1300, GRAVITY = 3875 }
 
+const safezone: Vector2 = Vector2(16, 0)
+
+@onready var detectors: Node2D = $detectors
 @onready var camera: Camera2D = $camera
 @onready var stats: Node = $stats
-
 @onready var _memory: Vector2 = position
 
-const safezone: Vector2 = Vector2(16, 0)
+func _ready() -> void:
+	stats.bind(camera.main)
+	detectors.set_control_entity(self)
 
 func rollback() -> void:
 	position = _memory
