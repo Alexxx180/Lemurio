@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var entity: Area2D = null
+@export var entity: PackedScene = null
 
 const score: int = 100
 
@@ -20,4 +20,9 @@ func _start(hero: CharacterBody2D) -> void:
 	animation.play("blocks/bonus")
 
 func _bonus() -> void:
-	pass
+	if entity != null:
+		print("INSTANCE!")
+		var bonus: Area2D = entity.instantiate()
+		add_child(bonus)
+		bonus.appear()
+		#bonus.position -= Vector2(0, 64)

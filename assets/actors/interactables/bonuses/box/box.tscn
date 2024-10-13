@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqusijrj8pptw"]
+[gd_scene load_steps=9 format=3 uid="uid://cqusijrj8pptw"]
 
 [ext_resource type="Script" path="res://assets/actors/interactables/bonuses/box/box.gd" id="1_rgkhx"]
 [ext_resource type="PackedScene" uid="uid://cehk37tpqllc3" path="res://assets/actors/interactables/bonuses/touch/touch.tscn" id="2_ojcsb"]
+[ext_resource type="PackedScene" uid="uid://dc8x4q4q1guep" path="res://assets/actors/interactables/bonuses/life/life.tscn" id="2_sf0m8"]
 [ext_resource type="Shape2D" uid="uid://bhpmwtvccfce5" path="res://resources/environment/common/shapes/block.tres" id="3_vo1ku"]
 [ext_resource type="PackedScene" uid="uid://dh24oinya1v7m" path="res://assets/actors/interactables/bonuses/box/animation/animation.tscn" id="4_o8i6a"]
 [ext_resource type="PackedScene" uid="uid://b0deg3ur7vhhg" path="res://assets/actors/interactables/bonuses/box/shape/empty.tscn" id="4_yohk7"]
@@ -12,6 +13,7 @@
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_rgkhx")
+entity = ExtResource("2_sf0m8")
 
 [node name="touch" parent="." instance=ExtResource("2_ojcsb")]
 
