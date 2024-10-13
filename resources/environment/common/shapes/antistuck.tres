@@ -1,0 +1,4 @@
+[gd_resource type="WorldBoundaryShape2D" format=3 uid="uid://c3l4jp71v2wvn"]
+
+[resource]
+distance = -128.0

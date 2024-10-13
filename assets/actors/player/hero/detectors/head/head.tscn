@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxs7cs4jjiqxy"]
+
+[ext_resource type="Script" path="res://assets/actors/player/hero/detectors/head/head.gd" id="1_gjeyi"]
+[ext_resource type="Shape2D" uid="uid://rg5orjyywpk2" path="res://resources/environment/common/shapes/hero.tres" id="1_q0x8u"]
+
+[node name="head" type="Area2D"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_gjeyi")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_q0x8u")
+
+[connection signal="body_entered" from="." to="." method="_break"]

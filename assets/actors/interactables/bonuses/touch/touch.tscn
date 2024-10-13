@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cehk37tpqllc3"]
+
+[ext_resource type="Script" path="res://assets/actors/interactables/bonuses/touch/touch.gd" id="1_ur5jj"]
+
+[node name="touch" type="Node"]
+script = ExtResource("1_ur5jj")

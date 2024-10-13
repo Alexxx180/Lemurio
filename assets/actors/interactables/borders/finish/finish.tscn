@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckmkufokg773a"]
+
+[ext_resource type="Script" path="res://assets/actors/interactables/borders/finish/finish.gd" id="1_hhj8h"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_raqc7"]
+normal = Vector2(-1, 0)
+
+[node name="finish" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_hhj8h")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_raqc7")
+
+[connection signal="body_entered" from="." to="." method="_finish"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://fqt10xxl7fpo"]
+
+[ext_resource type="Script" path="res://assets/actors/interactables/borders/gap/gap.gd" id="1_vmm2d"]
+[ext_resource type="Shape2D" uid="uid://c3l4jp71v2wvn" path="res://resources/environment/common/shapes/antistuck.tres" id="2_482hf"]
+
+[node name="gap" type="Area2D"]
+position = Vector2(0, 128)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_vmm2d")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_482hf")
+
+[connection signal="body_entered" from="." to="." method="_restart"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqusijrj8pptw"]
+
+[ext_resource type="Script" path="res://assets/actors/interactables/bonuses/box/box.gd" id="1_rgkhx"]
+[ext_resource type="PackedScene" uid="uid://cehk37tpqllc3" path="res://assets/actors/interactables/bonuses/touch/touch.tscn" id="2_ojcsb"]
+[ext_resource type="Shape2D" uid="uid://bhpmwtvccfce5" path="res://resources/environment/common/shapes/block.tres" id="3_vo1ku"]
+[ext_resource type="PackedScene" uid="uid://dh24oinya1v7m" path="res://assets/actors/interactables/bonuses/box/animation/animation.tscn" id="4_o8i6a"]
+[ext_resource type="PackedScene" uid="uid://b0deg3ur7vhhg" path="res://assets/actors/interactables/bonuses/box/shape/empty.tscn" id="4_yohk7"]
+[ext_resource type="PackedScene" uid="uid://co03c58s4aeph" path="res://assets/actors/interactables/bonuses/box/shape/view.tscn" id="5_rtasb"]
+[ext_resource type="AnimationLibrary" uid="uid://dxcw30gjs3prr" path="res://resources/environment/common/animation/blocks.res" id="5_t5i1s"]
+
+[node name="box" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_rgkhx")
+
+[node name="touch" parent="." instance=ExtResource("2_ojcsb")]
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = ExtResource("3_vo1ku")
+
+[node name="empty" parent="shape" instance=ExtResource("4_yohk7")]
+
+[node name="view" parent="shape" instance=ExtResource("5_rtasb")]
+
+[node name="animation" parent="." instance=ExtResource("4_o8i6a")]
+libraries = {
+"blocks": ExtResource("5_t5i1s")
+}

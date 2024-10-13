@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b45u2bxun33wj"]
+
+[ext_resource type="Shape2D" uid="uid://c4oulck3t01ir" path="res://assets/actors/interactables/borders/end/end.tres" id="1_nyljd"]
+
+[node name="end" type="StaticBody2D"]
+collision_mask = 0
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(20032, 0)
+shape = ExtResource("1_nyljd")

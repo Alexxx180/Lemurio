@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxjvv8dhgv3ii"]
+
+[ext_resource type="PackedScene" uid="uid://cpdnkx31oauy2" path="res://assets/actors/interactables/borders/start/start.tscn" id="1_5t1b8"]
+[ext_resource type="PackedScene" uid="uid://fqt10xxl7fpo" path="res://assets/actors/interactables/borders/gap/gap.tscn" id="2_507ar"]
+[ext_resource type="PackedScene" uid="uid://qlo4r4rboix2" path="res://assets/actors/interactables/borders/antistuck.tscn" id="3_3blt2"]
+[ext_resource type="PackedScene" uid="uid://ckmkufokg773a" path="res://assets/actors/interactables/borders/finish/finish.tscn" id="4_og7t1"]
+[ext_resource type="PackedScene" uid="uid://b45u2bxun33wj" path="res://assets/actors/interactables/borders/end/end.tscn" id="5_7vslp"]
+
+[node name="borders" type="Node2D"]
+
+[node name="start" parent="." instance=ExtResource("1_5t1b8")]
+
+[node name="gap" parent="." instance=ExtResource("2_507ar")]
+
+[node name="antistuck" parent="." instance=ExtResource("3_3blt2")]
+
+[node name="finish" parent="." instance=ExtResource("4_og7t1")]
+position = Vector2(19836, 0)
+
+[node name="end" parent="." instance=ExtResource("5_7vslp")]

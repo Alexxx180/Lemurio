@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://br3toant515et"]
+
+[sub_resource type="Gradient" id="Gradient_1aka0"]
+colors = PackedColorArray(0, 0, 0, 1, 0.118581, 0.118581, 0.118581, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o1q02"]
+gradient = SubResource("Gradient_1aka0")
+
+[node name="view" type="Sprite2D"]
+scale = Vector2(0.078125, 30)
+texture = SubResource("GradientTexture1D_o1q02")
