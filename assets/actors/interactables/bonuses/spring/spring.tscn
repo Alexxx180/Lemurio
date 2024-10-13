@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2uohsox4ansn"]
+
+[ext_resource type="Shape2D" uid="uid://bhpmwtvccfce5" path="res://resources/environment/common/shapes/block.tres" id="1_6lpf5"]
+[ext_resource type="PackedScene" uid="uid://cehk37tpqllc3" path="res://assets/actors/interactables/bonuses/touch/touch.tscn" id="1_kqsbl"]
+[ext_resource type="Script" path="res://assets/actors/interactables/bonuses/spring/spring.gd" id="1_tjqxj"]
+
+[sub_resource type="Gradient" id="Gradient_s0fla"]
+colors = PackedColorArray(0.803023, 0.548443, 0, 1, 0.664634, 0.07432, 0.182338, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sh425"]
+gradient = SubResource("Gradient_s0fla")
+
+[node name="spring" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_tjqxj")
+
+[node name="touch" parent="." instance=ExtResource("1_kqsbl")]
+
+[node name="view" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.25, 64)
+texture = SubResource("GradientTexture1D_sh425")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_6lpf5")

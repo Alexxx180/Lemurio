@@ -19,10 +19,13 @@ func rollback() -> void:
 func remember(direction: Vector2) -> void:
 	_memory = position - safezone * direction
 
+func jump(force: float) -> void:
+	velocity.y -= force * JUMP
+
 func _input(_event: InputEvent) -> void:
 	velocity.x = Input.get_axis("move_left", "move_right") * SPEED
 	if is_on_floor() and velocity.y >= 0:
-		velocity.y -= Input.get_action_strength("jump") * JUMP
+		jump(Input.get_action_strength("jump"))
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
