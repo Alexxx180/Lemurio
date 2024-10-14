@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqxh63u61e74a"]
+[gd_scene load_steps=5 format=3 uid="uid://dqxh63u61e74a"]
 
 [ext_resource type="Script" path="res://assets/actors/player/hero/detectors/detectors.gd" id="1_7p3dt"]
 [ext_resource type="PackedScene" uid="uid://dxs7cs4jjiqxy" path="res://assets/actors/player/hero/detectors/head/head.tscn" id="1_yakt3"]
+[ext_resource type="PackedScene" uid="uid://cdfgj5qrxpv84" path="res://assets/actors/player/hero/detectors/body/body.tscn" id="3_ilfjq"]
 [ext_resource type="PackedScene" uid="uid://c6kcnlkx8r00g" path="res://assets/actors/player/hero/detectors/feet/feet.tscn" id="3_yxonh"]
 
 [node name="detectors" type="Node2D"]
@@ -9,6 +10,8 @@ script = ExtResource("1_7p3dt")
 
 [node name="head" parent="." instance=ExtResource("1_yakt3")]
 position = Vector2(0, -13)
+
+[node name="body" parent="." instance=ExtResource("3_ilfjq")]
 
 [node name="feet" parent="." instance=ExtResource("3_yxonh")]
 position = Vector2(0, 13)

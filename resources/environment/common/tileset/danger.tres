@@ -1,4 +1,11 @@
-[gd_resource type="TileSet" format=3 uid="uid://bf8nmd3fiqowd"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bf8nmd3fiqowd"]
+
+[ext_resource type="PackedScene" uid="uid://du2l8w8u0dv1a" path="res://assets/actors/enemy/enemy.tscn" id="1_iq5af"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xttxt"]
+resource_name = "enemy"
+scenes/1/scene = ExtResource("1_iq5af")
 
 [resource]
 tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_xttxt")

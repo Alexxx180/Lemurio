@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdfgj5qrxpv84"]
+
+[ext_resource type="Script" path="res://assets/actors/player/hero/detectors/body/body.gd" id="1_2vdwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t54p4"]
+size = Vector2(22, 27)
+
+[node name="body" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_2vdwc")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_t54p4")
+
+[node name="mercy" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_hit"]
+[connection signal="timeout" from="mercy" to="." method="_stop_mercy"]

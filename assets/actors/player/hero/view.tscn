@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://br3toant515et"]
 
 [sub_resource type="Gradient" id="Gradient_1aka0"]
-colors = PackedColorArray(0, 0, 0, 1, 0.118581, 0.118581, 0.118581, 1)
+offsets = PackedFloat32Array(0.0240964, 1)
+colors = PackedColorArray(0.867306, 0.577514, 0.133112, 1, 0.659537, 0.504561, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_o1q02"]
 gradient = SubResource("Gradient_1aka0")

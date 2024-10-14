@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://du2l8w8u0dv1a"]
+
+[ext_resource type="Script" path="res://assets/actors/enemy/enemy.gd" id="1_5o20w"]
+[ext_resource type="PackedScene" uid="uid://cehk37tpqllc3" path="res://assets/actors/interactables/bonuses/touch/touch.tscn" id="2_nlwqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uii6"]
+size = Vector2(64, 16)
+
+[sub_resource type="Gradient" id="Gradient_spf73"]
+colors = PackedColorArray(0.378709, 0.165948, 0.49143, 1, 0.984324, 0.226926, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_55w5v"]
+gradient = SubResource("Gradient_spf73")
+
+[sub_resource type="Animation" id="Animation_myux4"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2iffd"]
+_data = {
+"RESET": SubResource("Animation_myux4")
+}
+
+[sub_resource type="Animation" id="Animation_bsihl"]
+length = 5.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shape:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 3.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 17), Vector2(-96, 17), Vector2(0, 17), Vector2(96, 17), Vector2(0, 17)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fwcxr"]
+_data = {
+"crawling": SubResource("Animation_bsihl")
+}
+
+[node name="enemy" type="CharacterBody2D"]
+collision_layer = 20
+script = ExtResource("1_5o20w")
+
+[node name="touch" parent="." instance=ExtResource("2_nlwqe")]
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_5uii6")
+
+[node name="view" type="Sprite2D" parent="shape"]
+scale = Vector2(0.25, 16)
+texture = SubResource("GradientTexture1D_55w5v")
+
+[node name="animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2iffd"),
+"enemy": SubResource("AnimationLibrary_fwcxr")
+}
+autoplay = "enemy/crawling"

@@ -7,11 +7,17 @@ const safezone: Vector2 = Vector2(16, 0)
 @onready var detectors: Node2D = $detectors
 @onready var camera: Camera2D = $camera
 @onready var stats: Node = $stats
+@onready var animation: Node = $animation
 @onready var _memory: Vector2 = position
 
 func _ready() -> void:
 	stats.bind(camera.main)
+	stats.lives.on_changed.connect(restart)
 	detectors.set_control_entity(self)
+
+func restart(lives: int) -> void:
+	if lives <= 0:
+		get_tree().call_deferred("reload_current_scene")
 
 func rollback() -> void:
 	position = _memory
