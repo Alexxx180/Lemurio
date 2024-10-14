@@ -13,11 +13,17 @@ const safezone: Vector2 = Vector2(16, 0)
 func _ready() -> void:
 	stats.bind(camera.main)
 	stats.lives.on_changed.connect(restart)
+	stats.time.on_changed.connect(time_up)
 	detectors.set_control_entity(self)
 
-func restart(lives: int) -> void:
-	if lives <= 0:
-		get_tree().call_deferred("reload_current_scene")
+func _reload() -> void:
+	get_tree().call_deferred("reload_current_scene")
+
+func restart(lives: int) -> void: if lives < 0: _reload()
+func time_up(time: int) -> void: if time <= 0: _reload()
+
+func _time_tick() -> void:
+	stats.time.value -= 1
 
 func rollback() -> void:
 	position = _memory

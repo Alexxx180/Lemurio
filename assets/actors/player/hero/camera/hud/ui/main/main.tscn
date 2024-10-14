@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhl2ppasg1jud"]
+[gd_scene load_steps=5 format=3 uid="uid://bhl2ppasg1jud"]
 
 [ext_resource type="Script" path="res://assets/actors/player/hero/camera/hud/ui/main/main.gd" id="1_ekdkh"]
 [ext_resource type="PackedScene" uid="uid://byb0p7bguir7w" path="res://assets/actors/player/hero/camera/hud/ui/main/score/score.tscn" id="1_s2402"]
 [ext_resource type="PackedScene" uid="uid://b82e1gt3s8fnd" path="res://assets/actors/player/hero/camera/hud/ui/main/lives/lives.tscn" id="2_njhtc"]
+[ext_resource type="PackedScene" uid="uid://bgi7lbgqopc62" path="res://assets/actors/player/hero/camera/hud/ui/main/time/time.tscn" id="4_nxwsp"]
 
 [node name="main" type="MarginContainer"]
 anchors_preset = 15
@@ -17,4 +18,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 
 [node name="lives" parent="." instance=ExtResource("2_njhtc")]
+layout_mode = 2
+
+[node name="time" parent="." instance=ExtResource("4_nxwsp")]
 layout_mode = 2

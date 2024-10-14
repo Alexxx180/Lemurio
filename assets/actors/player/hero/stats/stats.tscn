@@ -6,7 +6,10 @@
 [node name="stats" type="Node"]
 script = ExtResource("1_fkunr")
 
+[node name="score" parent="." instance=ExtResource("1_drh21")]
+
 [node name="lives" parent="." instance=ExtResource("1_drh21")]
 _value = 3
 
-[node name="score" parent="." instance=ExtResource("1_drh21")]
+[node name="time" parent="." instance=ExtResource("1_drh21")]
+_value = 400

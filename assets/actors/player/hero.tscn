@@ -69,3 +69,9 @@ limit_right = 20031
 libraries = {
 "": SubResource("AnimationLibrary_nmxt6")
 }
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[connection signal="timeout" from="timer" to="." method="_time_tick"]
