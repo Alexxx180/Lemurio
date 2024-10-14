@@ -18,14 +18,19 @@ func _ready() -> void:
 	stats.score.on_changed.connect(Global.score)
 	detectors.set_control_entity(self)
 
-func _reload() -> void:
-	get_tree().call_deferred("reload_current_scene")
+func _reload(tree: SceneTree) -> void:
+	tree.call_deferred("reload_current_scene")
 
-func restart(lives: int) -> void:
-	if lives < 0: _reload()
+func _reset() -> void:
+	var tree: SceneTree = get_tree()
+	var first: String = Finisher.entry()
+	if tree.current_scene.scene_file_path == first:
+		_reload(tree)
+	else:
+		tree.call_deferred("change_scene_to_file", first)
 
-func time_up(time: int) -> void:
-	if time <= 0: _reload()
+func restart(lives: int) -> void: if lives < 0: _reset()
+func time_up(time: int) -> void: if time <= 0: _reload(get_tree())
 
 func _time_tick() -> void:
 	stats.time.value -= 1

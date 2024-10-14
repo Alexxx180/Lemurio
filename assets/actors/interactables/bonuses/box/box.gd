@@ -21,8 +21,6 @@ func _start(hero: CharacterBody2D) -> void:
 
 func _bonus() -> void:
 	if entity != null:
-		print("INSTANCE!")
 		var bonus: Area2D = entity.instantiate()
 		add_child(bonus)
 		bonus.appear()
-		#bonus.position -= Vector2(0, 64)

@@ -6,7 +6,7 @@ var hero: CharacterBody2D
 
 @export var _invincible: bool = false
 
-func _hit(enemy: CharacterBody2D) -> void:
+func _hit(_enemy: CharacterBody2D) -> void:
 	if _invincible: return
 	_invincible = true
 	hero.stats.lives.value -= 1
