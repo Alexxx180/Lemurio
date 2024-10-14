@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckmkufokg773a"]
+[gd_scene load_steps=7 format=3 uid="uid://ckmkufokg773a"]
 
 [ext_resource type="Script" path="res://assets/actors/interactables/borders/finish/finish.gd" id="1_hhj8h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_raqc7"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="Gradient" id="Gradient_onf10"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ab620"]
+gradient = SubResource("Gradient_onf10")
+
+[sub_resource type="Gradient" id="Gradient_cxrhl"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v4ohr"]
+gradient = SubResource("Gradient_cxrhl")
 
 [node name="finish" type="Area2D"]
 collision_layer = 0
@@ -12,5 +22,15 @@ script = ExtResource("1_hhj8h")
 
 [node name="shape" type="CollisionShape2D" parent="."]
 shape = SubResource("WorldBoundaryShape2D_raqc7")
+
+[node name="flagpole" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -36)
+scale = Vector2(0.0429688, 59)
+texture = SubResource("GradientTexture1D_ab620")
+
+[node name="flag" type="Sprite2D" parent="flagpole"]
+position = Vector2(290.909, -0.313559)
+scale = Vector2(3.54545, 0.525424)
+texture = SubResource("GradientTexture1D_v4ohr")
 
 [connection signal="body_entered" from="." to="." method="_finish"]

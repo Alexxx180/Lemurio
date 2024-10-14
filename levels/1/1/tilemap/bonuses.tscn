@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c06ds6ehguanq"]
-
-[ext_resource type="TileSet" uid="uid://dl0t2bnx178er" path="res://resources/environment/common/tileset/bonuses.tres" id="1_sisy3"]
-
-[node name="bonuses" type="TileMapLayer"]
-tile_map_data = PackedByteArray(0, 0, 7, 0, 252, 255, 0, 0, 0, 0, 0, 0, 1, 0, 8, 0, 252, 255, 0, 0, 0, 0, 0, 0, 1, 0, 9, 0, 252, 255, 0, 0, 0, 0, 0, 0, 1, 0, 5, 0, 252, 255, 0, 0, 0, 0, 0, 0, 1, 0)
-tile_set = ExtResource("1_sisy3")

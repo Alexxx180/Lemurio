@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://mtfxlq18s18s"]
+[gd_scene load_steps=2 format=4 uid="uid://mtfxlq18s18s"]
 
 [ext_resource type="TileSet" uid="uid://bf8nmd3fiqowd" path="res://resources/environment/common/tileset/danger.tres" id="1_n8jvi"]
 
 [node name="danger" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAAJAP//AAAAAAAAAQA6AP//AAAAAAAAAQBJAP//AAAAAAAAAQBPAP//AAAAAAAAAQBmAP//AAAAAAAAAQBsAP//AAAAAAAAAQBxAP//AAAAAAAAAQCLAP//AAAAAAAAAQClAP//AAAAAAAAAQCtAP//AAAAAAAAAQC5AP//AAAAAAAAAQDWAP//AAAAAAAAAQDfAP//AAAAAAAAAQDwAP//AAAAAAAAAQAIAf//AAAAAAAAAQARAf//AAAAAAAAAQApAf//AAAAAAAAAQA=")
 tile_set = ExtResource("1_n8jvi")

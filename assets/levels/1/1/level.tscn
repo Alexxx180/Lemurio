@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://oyyflhjjtq"]
+[gd_scene load_steps=4 format=3 uid="uid://md4wma2tf81l"]
 
-[node name="level" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://d1lhw3gy0cc6t" path="res://assets/levels/1/1/tilemap/tilemap.tscn" id="2_kfcqg"]
+[ext_resource type="PackedScene" uid="uid://bodc0f0gvba3w" path="res://assets/actors/player/hero.tscn" id="3_i7432"]
+[ext_resource type="PackedScene" uid="uid://bxjvv8dhgv3ii" path="res://assets/actors/interactables/borders/borders.tscn" id="3_rv3gq"]
+
+[node name="level-1-1" type="Node2D"]
+
+[node name="tilemap" parent="." instance=ExtResource("2_kfcqg")]
+
+[node name="borders" parent="." instance=ExtResource("3_rv3gq")]
+
+[node name="hero" parent="." instance=ExtResource("3_i7432")]

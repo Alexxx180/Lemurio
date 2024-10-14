@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwr50o4vj47tb"]
+
+[ext_resource type="PackedScene" uid="uid://xv0ngifor5lv" path="res://assets/levels/1/2/tilemap/tilemap.tscn" id="1_lgkd8"]
+[ext_resource type="PackedScene" uid="uid://bxjvv8dhgv3ii" path="res://assets/actors/interactables/borders/borders.tscn" id="2_javjt"]
+[ext_resource type="PackedScene" uid="uid://bodc0f0gvba3w" path="res://assets/actors/player/hero.tscn" id="3_rvrod"]
+
+[node name="level" type="Node2D"]
+
+[node name="tilemap" parent="." instance=ExtResource("1_lgkd8")]
+
+[node name="borders" parent="." instance=ExtResource("2_javjt")]
+
+[node name="hero" parent="." instance=ExtResource("3_rvrod")]
