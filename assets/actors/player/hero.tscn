@@ -7,6 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://bbe1bbpojklqd" path="res://assets/actors/player/hero/stats/stats.tscn" id="5_8xd0n"]
 [ext_resource type="PackedScene" uid="uid://dqxh63u61e74a" path="res://assets/actors/player/hero/detectors/detectors.tscn" id="5_fuybm"]
 
+[sub_resource type="Animation" id="Animation_ch1j3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_uj2yw"]
 resource_name = "blink"
 length = 0.2
@@ -23,21 +38,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.294118), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ch1j3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nmxt6"]
