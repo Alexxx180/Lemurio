@@ -14,13 +14,18 @@ func _ready() -> void:
 	stats.bind(camera.main)
 	stats.lives.on_changed.connect(restart)
 	stats.time.on_changed.connect(time_up)
+	stats.lives.on_changed.connect(Global.lives)
+	stats.score.on_changed.connect(Global.score)
 	detectors.set_control_entity(self)
 
 func _reload() -> void:
 	get_tree().call_deferred("reload_current_scene")
 
-func restart(lives: int) -> void: if lives < 0: _reload()
-func time_up(time: int) -> void: if time <= 0: _reload()
+func restart(lives: int) -> void:
+	if lives < 0: _reload()
+
+func time_up(time: int) -> void:
+	if time <= 0: _reload()
 
 func _time_tick() -> void:
 	stats.time.value -= 1
